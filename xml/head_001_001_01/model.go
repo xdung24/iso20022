@@ -20,50 +20,50 @@ type BICFIIdentifier string
 
 // BranchAndFinancialInstitutionIdentification5 ...
 type BranchAndFinancialInstitutionIdentification5 struct {
-	XMLName    *xml.Name                            `xml:"urn1:BranchAndFinancialInstitutionIdentification5"`
-	FinInstnId *FinancialInstitutionIdentification8 `xml:"urn1:FinInstnId"`
-	BrnchId    *BranchData2                         `xml:"urn1:BrnchId"`
+	XMLName    *xml.Name                            `xml:"urn:BranchAndFinancialInstitutionIdentification5"`
+	FinInstnId *FinancialInstitutionIdentification8 `xml:"urn:FinInstnId"`
+	BrnchId    *BranchData2                         `xml:"urn:BrnchId"`
 }
 
 // BranchData2 ...
 type BranchData2 struct {
-	XMLName *xml.Name       `xml:"urn1:BranchData2"`
-	Id      string          `xml:"urn1:Id"`
-	Nm      string          `xml:"urn1:Nm"`
-	PstlAdr *PostalAddress6 `xml:"urn1:PstlAdr"`
+	XMLName *xml.Name       `xml:"urn:BranchData2"`
+	Id      string          `xml:"urn:Id"`
+	Nm      string          `xml:"urn:Nm"`
+	PstlAdr *PostalAddress6 `xml:"urn:PstlAdr"`
 }
 
 // BusinessApplicationHeader1 ...
 type BusinessApplicationHeader1 struct {
-	XMLName    *xml.Name          `xml:"urn1:BusinessApplicationHeader1"`
-	CharSet    string             `xml:"urn1:CharSet"`
-	Fr         *Party9Choice      `xml:"urn1:Fr"`
-	To         *Party9Choice      `xml:"urn1:To"`
-	BizMsgIdr  string             `xml:"urn1:BizMsgIdr"`
-	MsgDefIdr  string             `xml:"urn1:MsgDefIdr"`
-	BizSvc     string             `xml:"urn1:BizSvc"`
-	CreDt      string             `xml:"urn1:CreDt"`
-	CpyDplct   string             `xml:"urn1:CpyDplct"`
-	PssblDplct bool               `xml:"urn1:PssblDplct"`
-	Prty       string             `xml:"urn1:Prty"`
-	Sgntr      *SignatureEnvelope `xml:"urn1:Sgntr"`
+	XMLName    *xml.Name          `xml:"urn:BusinessApplicationHeader1"`
+	CharSet    string             `xml:"urn:CharSet"`
+	Fr         *Party9Choice      `xml:"urn:Fr"`
+	To         *Party9Choice      `xml:"urn:To"`
+	BizMsgIdr  string             `xml:"urn:BizMsgIdr"`
+	MsgDefIdr  string             `xml:"urn:MsgDefIdr"`
+	BizSvc     string             `xml:"urn:BizSvc"`
+	CreDt      string             `xml:"urn:CreDt"`
+	CpyDplct   string             `xml:"urn:CpyDplct"`
+	PssblDplct bool               `xml:"urn:PssblDplct"`
+	Prty       string             `xml:"urn:Prty"`
+	Sgntr      *SignatureEnvelope `xml:"urn:Sgntr"`
 }
 
 // BusinessApplicationHeaderV01 ...
 type BusinessApplicationHeaderV01 struct {
-	XMLName    *xml.Name                   `xml:"urn1:BusinessApplicationHeaderV01"`
-	CharSet    string                      `xml:"urn1:CharSet"`
-	Fr         *Party9Choice               `xml:"urn1:Fr"`
-	To         *Party9Choice               `xml:"urn1:To"`
-	BizMsgIdr  string                      `xml:"urn1:BizMsgIdr"`
-	MsgDefIdr  string                      `xml:"urn1:MsgDefIdr"`
-	BizSvc     string                      `xml:"urn1:BizSvc"`
-	CreDt      string                      `xml:"urn1:CreDt"`
-	CpyDplct   string                      `xml:"urn1:CpyDplct"`
-	PssblDplct bool                        `xml:"urn1:PssblDplct"`
-	Prty       string                      `xml:"urn1:Prty"`
-	Sgntr      *SignatureEnvelope          `xml:"urn1:Sgntr"`
-	Rltd       *BusinessApplicationHeader1 `xml:"urn1:Rltd"`
+	XMLName    *xml.Name                   `xml:"urn:BusinessApplicationHeaderV01"`
+	CharSet    string                      `xml:"urn:CharSet"`
+	Fr         *Party9Choice               `xml:"urn:Fr"`
+	To         *Party9Choice               `xml:"urn:To"`
+	BizMsgIdr  string                      `xml:"urn:BizMsgIdr"`
+	MsgDefIdr  string                      `xml:"urn:MsgDefIdr"`
+	BizSvc     string                      `xml:"urn:BizSvc"`
+	CreDt      string                      `xml:"urn:CreDt"`
+	CpyDplct   string                      `xml:"urn:CpyDplct"`
+	PssblDplct bool                        `xml:"urn:PssblDplct"`
+	Prty       string                      `xml:"urn:Prty"`
+	Sgntr      *SignatureEnvelope          `xml:"urn:Sgntr"`
+	Rltd       *BusinessApplicationHeader1 `xml:"urn:Rltd"`
 }
 
 // BusinessMessagePriorityCode ...
@@ -71,28 +71,28 @@ type BusinessMessagePriorityCode string
 
 // ClearingSystemIdentification2Choice ...
 type ClearingSystemIdentification2Choice struct {
-	XMLName *xml.Name `xml:"urn1:ClearingSystemIdentification2Choice"`
-	Cd      string    `xml:"urn1:Cd"`
-	Prtry   string    `xml:"urn1:Prtry"`
+	XMLName *xml.Name `xml:"urn:ClearingSystemIdentification2Choice"`
+	Cd      string    `xml:"urn:Cd"`
+	Prtry   string    `xml:"urn:Prtry"`
 }
 
 // ClearingSystemMemberIdentification2 ...
 type ClearingSystemMemberIdentification2 struct {
-	XMLName  *xml.Name                            `xml:"urn1:ClearingSystemMemberIdentification2"`
-	ClrSysId *ClearingSystemIdentification2Choice `xml:"urn1:ClrSysId"`
-	MmbId    string                               `xml:"urn1:MmbId"`
+	XMLName  *xml.Name                            `xml:"urn:ClearingSystemMemberIdentification2"`
+	ClrSysId *ClearingSystemIdentification2Choice `xml:"urn:ClrSysId"`
+	MmbId    string                               `xml:"urn:MmbId"`
 }
 
 // ContactDetails2 ...
 type ContactDetails2 struct {
-	XMLName  *xml.Name `xml:"urn1:ContactDetails2"`
-	NmPrfx   string    `xml:"urn1:NmPrfx"`
-	Nm       string    `xml:"urn1:Nm"`
-	PhneNb   string    `xml:"urn1:PhneNb"`
-	MobNb    string    `xml:"urn1:MobNb"`
-	FaxNb    string    `xml:"urn1:FaxNb"`
-	EmailAdr string    `xml:"urn1:EmailAdr"`
-	Othr     string    `xml:"urn1:Othr"`
+	XMLName  *xml.Name `xml:"urn:ContactDetails2"`
+	NmPrfx   string    `xml:"urn:NmPrfx"`
+	Nm       string    `xml:"urn:Nm"`
+	PhneNb   string    `xml:"urn:PhneNb"`
+	MobNb    string    `xml:"urn:MobNb"`
+	FaxNb    string    `xml:"urn:FaxNb"`
+	EmailAdr string    `xml:"urn:EmailAdr"`
+	Othr     string    `xml:"urn:Othr"`
 }
 
 // CopyDuplicate1Code ...
@@ -103,11 +103,11 @@ type CountryCode string
 
 // DateAndPlaceOfBirth ...
 type DateAndPlaceOfBirth struct {
-	XMLName     *xml.Name `xml:"urn1:DateAndPlaceOfBirth"`
-	BirthDt     string    `xml:"urn1:BirthDt"`
-	PrvcOfBirth string    `xml:"urn1:PrvcOfBirth"`
-	CityOfBirth string    `xml:"urn1:CityOfBirth"`
-	CtryOfBirth string    `xml:"urn1:CtryOfBirth"`
+	XMLName     *xml.Name `xml:"urn:DateAndPlaceOfBirth"`
+	BirthDt     string    `xml:"urn:BirthDt"`
+	PrvcOfBirth string    `xml:"urn:PrvcOfBirth"`
+	CityOfBirth string    `xml:"urn:CityOfBirth"`
+	CtryOfBirth string    `xml:"urn:CtryOfBirth"`
 }
 
 // ExternalClearingSystemIdentification1Code ...
@@ -124,43 +124,43 @@ type ExternalPersonIdentification1Code string
 
 // FinancialIdentificationSchemeName1Choice ...
 type FinancialIdentificationSchemeName1Choice struct {
-	XMLName *xml.Name `xml:"urn1:FinancialIdentificationSchemeName1Choice"`
-	Cd      string    `xml:"urn1:Cd"`
-	Prtry   string    `xml:"urn1:Prtry"`
+	XMLName *xml.Name `xml:"urn:FinancialIdentificationSchemeName1Choice"`
+	Cd      string    `xml:"urn:Cd"`
+	Prtry   string    `xml:"urn:Prtry"`
 }
 
 // FinancialInstitutionIdentification8 ...
 type FinancialInstitutionIdentification8 struct {
-	XMLName     *xml.Name                            `xml:"urn1:FinancialInstitutionIdentification8"`
-	BICFI       string                               `xml:"urn1:BICFI"`
-	ClrSysMmbId *ClearingSystemMemberIdentification2 `xml:"urn1:ClrSysMmbId"`
-	Nm          string                               `xml:"urn1:Nm"`
-	PstlAdr     *PostalAddress6                      `xml:"urn1:PstlAdr"`
-	Othr        *GenericFinancialIdentification1     `xml:"urn1:Othr"`
+	XMLName     *xml.Name                            `xml:"urn:FinancialInstitutionIdentification8"`
+	BICFI       string                               `xml:"urn:BICFI"`
+	ClrSysMmbId *ClearingSystemMemberIdentification2 `xml:"urn:ClrSysMmbId"`
+	Nm          string                               `xml:"urn:Nm"`
+	PstlAdr     *PostalAddress6                      `xml:"urn:PstlAdr"`
+	Othr        *GenericFinancialIdentification1     `xml:"urn:Othr"`
 }
 
 // GenericFinancialIdentification1 ...
 type GenericFinancialIdentification1 struct {
-	XMLName *xml.Name                                 `xml:"urn1:GenericFinancialIdentification1"`
-	Id      string                                    `xml:"urn1:Id"`
-	SchmeNm *FinancialIdentificationSchemeName1Choice `xml:"urn1:SchmeNm"`
-	Issr    string                                    `xml:"urn1:Issr"`
+	XMLName *xml.Name                                 `xml:"urn:GenericFinancialIdentification1"`
+	Id      string                                    `xml:"urn:Id"`
+	SchmeNm *FinancialIdentificationSchemeName1Choice `xml:"urn:SchmeNm"`
+	Issr    string                                    `xml:"urn:Issr"`
 }
 
 // GenericOrganisationIdentification1 ...
 type GenericOrganisationIdentification1 struct {
-	XMLName *xml.Name                                    `xml:"urn1:GenericOrganisationIdentification1"`
-	Id      string                                       `xml:"urn1:Id"`
-	SchmeNm *OrganisationIdentificationSchemeName1Choice `xml:"urn1:SchmeNm"`
-	Issr    string                                       `xml:"urn1:Issr"`
+	XMLName *xml.Name                                    `xml:"urn:GenericOrganisationIdentification1"`
+	Id      string                                       `xml:"urn:Id"`
+	SchmeNm *OrganisationIdentificationSchemeName1Choice `xml:"urn:SchmeNm"`
+	Issr    string                                       `xml:"urn:Issr"`
 }
 
 // GenericPersonIdentification1 ...
 type GenericPersonIdentification1 struct {
-	XMLName *xml.Name                              `xml:"urn1:GenericPersonIdentification1"`
-	Id      string                                 `xml:"urn1:Id"`
-	SchmeNm *PersonIdentificationSchemeName1Choice `xml:"urn1:SchmeNm"`
-	Issr    string                                 `xml:"urn1:Issr"`
+	XMLName *xml.Name                              `xml:"urn:GenericPersonIdentification1"`
+	Id      string                                 `xml:"urn:Id"`
+	SchmeNm *PersonIdentificationSchemeName1Choice `xml:"urn:SchmeNm"`
+	Issr    string                                 `xml:"urn:Issr"`
 }
 
 // ISODate ...
@@ -189,54 +189,54 @@ type NamePrefix1Code string
 
 // OrganisationIdentification7 ...
 type OrganisationIdentification7 struct {
-	XMLName *xml.Name                             `xml:"urn1:OrganisationIdentification7"`
-	AnyBIC  string                                `xml:"urn1:AnyBIC"`
-	Othr    []*GenericOrganisationIdentification1 `xml:"urn1:Othr"`
+	XMLName *xml.Name                             `xml:"urn:OrganisationIdentification7"`
+	AnyBIC  string                                `xml:"urn:AnyBIC"`
+	Othr    []*GenericOrganisationIdentification1 `xml:"urn:Othr"`
 }
 
 // OrganisationIdentificationSchemeName1Choice ...
 type OrganisationIdentificationSchemeName1Choice struct {
-	XMLName *xml.Name `xml:"urn1:OrganisationIdentificationSchemeName1Choice"`
-	Cd      string    `xml:"urn1:Cd"`
-	Prtry   string    `xml:"urn1:Prtry"`
+	XMLName *xml.Name `xml:"urn:OrganisationIdentificationSchemeName1Choice"`
+	Cd      string    `xml:"urn:Cd"`
+	Prtry   string    `xml:"urn:Prtry"`
 }
 
 // Party10Choice ...
 type Party10Choice struct {
-	XMLName *xml.Name                    `xml:"urn1:Party10Choice"`
-	OrgId   *OrganisationIdentification7 `xml:"urn1:OrgId"`
-	PrvtId  *PersonIdentification5       `xml:"urn1:PrvtId"`
+	XMLName *xml.Name                    `xml:"urn:Party10Choice"`
+	OrgId   *OrganisationIdentification7 `xml:"urn:OrgId"`
+	PrvtId  *PersonIdentification5       `xml:"urn:PrvtId"`
 }
 
 // Party9Choice ...
 type Party9Choice struct {
-	XMLName *xml.Name                                     `xml:"urn1:Party9Choice"`
-	OrgId   *PartyIdentification42                        `xml:"urn1:OrgId"`
-	FIId    *BranchAndFinancialInstitutionIdentification5 `xml:"urn1:FIId"`
+	XMLName *xml.Name                                     `xml:"urn:Party9Choice"`
+	OrgId   *PartyIdentification42                        `xml:"urn:OrgId"`
+	FIId    *BranchAndFinancialInstitutionIdentification5 `xml:"urn:FIId"`
 }
 
 // PartyIdentification42 ...
 type PartyIdentification42 struct {
-	XMLName   *xml.Name        `xml:"urn1:PartyIdentification42"`
-	Nm        string           `xml:"urn1:Nm"`
-	PstlAdr   *PostalAddress6  `xml:"urn1:PstlAdr"`
-	Id        *Party10Choice   `xml:"urn1:Id"`
-	CtryOfRes string           `xml:"urn1:CtryOfRes"`
-	CtctDtls  *ContactDetails2 `xml:"urn1:CtctDtls"`
+	XMLName   *xml.Name        `xml:"urn:PartyIdentification42"`
+	Nm        string           `xml:"urn:Nm"`
+	PstlAdr   *PostalAddress6  `xml:"urn:PstlAdr"`
+	Id        *Party10Choice   `xml:"urn:Id"`
+	CtryOfRes string           `xml:"urn:CtryOfRes"`
+	CtctDtls  *ContactDetails2 `xml:"urn:CtctDtls"`
 }
 
 // PersonIdentification5 ...
 type PersonIdentification5 struct {
-	XMLName         *xml.Name                       `xml:"urn1:PersonIdentification5"`
-	DtAndPlcOfBirth *DateAndPlaceOfBirth            `xml:"urn1:DtAndPlcOfBirth"`
-	Othr            []*GenericPersonIdentification1 `xml:"urn1:Othr"`
+	XMLName         *xml.Name                       `xml:"urn:PersonIdentification5"`
+	DtAndPlcOfBirth *DateAndPlaceOfBirth            `xml:"urn:DtAndPlcOfBirth"`
+	Othr            []*GenericPersonIdentification1 `xml:"urn:Othr"`
 }
 
 // PersonIdentificationSchemeName1Choice ...
 type PersonIdentificationSchemeName1Choice struct {
-	XMLName *xml.Name `xml:"urn1:PersonIdentificationSchemeName1Choice"`
-	Cd      string    `xml:"urn1:Cd"`
-	Prtry   string    `xml:"urn1:Prtry"`
+	XMLName *xml.Name `xml:"urn:PersonIdentificationSchemeName1Choice"`
+	Cd      string    `xml:"urn:Cd"`
+	Prtry   string    `xml:"urn:Prtry"`
 }
 
 // PhoneNumber ...
@@ -244,22 +244,22 @@ type PhoneNumber string
 
 // PostalAddress6 ...
 type PostalAddress6 struct {
-	XMLName     *xml.Name `xml:"urn1:PostalAddress6"`
-	AdrTp       string    `xml:"urn1:AdrTp"`
-	Dept        string    `xml:"urn1:Dept"`
-	SubDept     string    `xml:"urn1:SubDept"`
-	StrtNm      string    `xml:"urn1:StrtNm"`
-	BldgNb      string    `xml:"urn1:BldgNb"`
-	PstCd       string    `xml:"urn1:PstCd"`
-	TwnNm       string    `xml:"urn1:TwnNm"`
-	CtrySubDvsn string    `xml:"urn1:CtrySubDvsn"`
-	Ctry        string    `xml:"urn1:Ctry"`
-	AdrLine     []string  `xml:"urn1:AdrLine"`
+	XMLName     *xml.Name `xml:"urn:PostalAddress6"`
+	AdrTp       string    `xml:"urn:AdrTp"`
+	Dept        string    `xml:"urn:Dept"`
+	SubDept     string    `xml:"urn:SubDept"`
+	StrtNm      string    `xml:"urn:StrtNm"`
+	BldgNb      string    `xml:"urn:BldgNb"`
+	PstCd       string    `xml:"urn:PstCd"`
+	TwnNm       string    `xml:"urn:TwnNm"`
+	CtrySubDvsn string    `xml:"urn:CtrySubDvsn"`
+	Ctry        string    `xml:"urn:Ctry"`
+	AdrLine     []string  `xml:"urn:AdrLine"`
 }
 
 // SignatureEnvelope ...
 type SignatureEnvelope struct {
-	XMLName *xml.Name `xml:"urn1:SignatureEnvelope"`
+	XMLName *xml.Name `xml:"urn:SignatureEnvelope"`
 }
 
 // UnicodeChartsCode ...
