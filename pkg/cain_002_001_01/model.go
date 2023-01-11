@@ -2,29 +2,23 @@
 
 package cain_002_001_01
 
-import (
-	"encoding/xml"
-)
-
 // Document ...
 type Document *Document
 
 // AccountIdentification30Choice ...
 type AccountIdentification30Choice struct {
-	XMLName *xml.Name `xml:"AccountIdentification30Choice"`
-	Card    string    `xml:"Card"`
-	MSISDN  string    `xml:"MSISDN"`
-	EMail   string    `xml:"EMail"`
-	IBAN    string    `xml:"IBAN"`
-	BBAN    string    `xml:"BBAN"`
-	UPIC    string    `xml:"UPIC"`
-	Dmst    string    `xml:"Dmst"`
-	Othr    string    `xml:"Othr"`
+	Card   string `xml:"Card"`
+	MSISDN string `xml:"MSISDN"`
+	EMail  string `xml:"EMail"`
+	IBAN   string `xml:"IBAN"`
+	BBAN   string `xml:"BBAN"`
+	UPIC   string `xml:"UPIC"`
+	Dmst   string `xml:"Dmst"`
+	Othr   string `xml:"Othr"`
 }
 
 // AcquirerAuthorisationResponse ...
 type AcquirerAuthorisationResponse struct {
-	XMLName     *xml.Name                       `xml:"AcquirerAuthorisationResponse"`
 	Hdr         *Header17                       `xml:"Hdr"`
 	AuthstnRspn *AcquirerAuthorisationResponse1 `xml:"AuthstnRspn"`
 	SctyTrlr    *ContentInformationType15       `xml:"SctyTrlr"`
@@ -32,34 +26,30 @@ type AcquirerAuthorisationResponse struct {
 
 // AcquirerAuthorisationResponse1 ...
 type AcquirerAuthorisationResponse1 struct {
-	XMLName *xml.Name                    `xml:"AcquirerAuthorisationResponse1"`
-	Envt    *CardTransactionEnvironment2 `xml:"Envt"`
-	Cntxt   *CardTransactionContext3     `xml:"Cntxt"`
-	Tx      *CardTransaction4            `xml:"Tx"`
+	Envt  *CardTransactionEnvironment2 `xml:"Envt"`
+	Cntxt *CardTransactionContext3     `xml:"Cntxt"`
+	Tx    *CardTransaction4            `xml:"Tx"`
 }
 
 // Action4 ...
 type Action4 struct {
-	XMLName   *xml.Name       `xml:"Action4"`
 	ActnTp    string          `xml:"ActnTp"`
 	MsgToPres *ActionMessage2 `xml:"MsgToPres"`
 }
 
 // ActionMessage2 ...
 type ActionMessage2 struct {
-	XMLName      *xml.Name `xml:"ActionMessage2"`
-	MsgDstn      string    `xml:"MsgDstn"`
-	Frmt         string    `xml:"Frmt"`
-	MsgCntt      string    `xml:"MsgCntt"`
-	MsgCnttSgntr string    `xml:"MsgCnttSgntr"`
+	MsgDstn      string `xml:"MsgDstn"`
+	Frmt         string `xml:"Frmt"`
+	MsgCntt      string `xml:"MsgCntt"`
+	MsgCnttSgntr string `xml:"MsgCnttSgntr"`
 }
 
 // ActionMessage3 ...
 type ActionMessage3 struct {
-	XMLName *xml.Name `xml:"ActionMessage3"`
-	Dstn    string    `xml:"Dstn"`
-	Frmt    string    `xml:"Frmt"`
-	Cntt    string    `xml:"Cntt"`
+	Dstn string `xml:"Dstn"`
+	Frmt string `xml:"Frmt"`
+	Cntt string `xml:"Cntt"`
 }
 
 // ActionType5Code ...
@@ -91,44 +81,38 @@ type Algorithm8Code string
 
 // AlgorithmIdentification11 ...
 type AlgorithmIdentification11 struct {
-	XMLName *xml.Name   `xml:"AlgorithmIdentification11"`
-	Algo    string      `xml:"Algo"`
-	Param   *Parameter4 `xml:"Param"`
+	Algo  string      `xml:"Algo"`
+	Param *Parameter4 `xml:"Param"`
 }
 
 // AlgorithmIdentification12 ...
 type AlgorithmIdentification12 struct {
-	XMLName *xml.Name   `xml:"AlgorithmIdentification12"`
-	Algo    string      `xml:"Algo"`
-	Param   *Parameter5 `xml:"Param"`
+	Algo  string      `xml:"Algo"`
+	Param *Parameter5 `xml:"Param"`
 }
 
 // AlgorithmIdentification13 ...
 type AlgorithmIdentification13 struct {
-	XMLName *xml.Name   `xml:"AlgorithmIdentification13"`
-	Algo    string      `xml:"Algo"`
-	Param   *Parameter6 `xml:"Param"`
+	Algo  string      `xml:"Algo"`
+	Param *Parameter6 `xml:"Param"`
 }
 
 // AlgorithmIdentification14 ...
 type AlgorithmIdentification14 struct {
-	XMLName *xml.Name   `xml:"AlgorithmIdentification14"`
-	Algo    string      `xml:"Algo"`
-	Param   *Parameter6 `xml:"Param"`
+	Algo  string      `xml:"Algo"`
+	Param *Parameter6 `xml:"Param"`
 }
 
 // AlgorithmIdentification15 ...
 type AlgorithmIdentification15 struct {
-	XMLName *xml.Name   `xml:"AlgorithmIdentification15"`
-	Algo    string      `xml:"Algo"`
-	Param   *Parameter7 `xml:"Param"`
+	Algo  string      `xml:"Algo"`
+	Param *Parameter7 `xml:"Param"`
 }
 
 // AmountAndDirection41 ...
 type AmountAndDirection41 struct {
-	XMLName *xml.Name          `xml:"AmountAndDirection41"`
-	Amt     *CurrencyAndAmount `xml:"Amt"`
-	Sgn     bool               `xml:"Sgn"`
+	Amt *CurrencyAndAmount `xml:"Amt"`
+	Sgn bool               `xml:"Sgn"`
 }
 
 // AnyBICIdentifier ...
@@ -139,7 +123,6 @@ type AttributeType1Code string
 
 // AuthenticatedData4 ...
 type AuthenticatedData4 struct {
-	XMLName     *xml.Name                  `xml:"AuthenticatedData4"`
 	Vrsn        float64                    `xml:"Vrsn"`
 	Rcpt        []*Recipient4Choice        `xml:"Rcpt"`
 	MACAlgo     *AlgorithmIdentification15 `xml:"MACAlgo"`
@@ -155,7 +138,6 @@ type AuthenticationMethod6Code string
 
 // AuthorisationResult8 ...
 type AuthorisationResult8 struct {
-	XMLName     *xml.Name                `xml:"AuthorisationResult8"`
 	AuthstnNtty *GenericIdentification75 `xml:"AuthstnNtty"`
 	TxRspn      *ResponseType2           `xml:"TxRspn"`
 	Actn        []*Action4               `xml:"Actn"`
@@ -174,7 +156,6 @@ type BytePadding1Code string
 
 // CardAccount2 ...
 type CardAccount2 struct {
-	XMLName      *xml.Name                      `xml:"CardAccount2"`
 	SelctdAcctTp string                         `xml:"SelctdAcctTp"`
 	AcctNm       string                         `xml:"AcctNm"`
 	AcctOwnr     *NameAndAddress3               `xml:"AcctOwnr"`
@@ -193,9 +174,8 @@ type CardPaymentServiceType7Code string
 
 // CardPaymentToken2 ...
 type CardPaymentToken2 struct {
-	XMLName      *xml.Name `xml:"CardPaymentToken2"`
-	TknChrtc     []string  `xml:"TknChrtc"`
-	TknAssrncLvl float64   `xml:"TknAssrncLvl"`
+	TknChrtc     []string `xml:"TknChrtc"`
+	TknAssrncLvl float64  `xml:"TknAssrncLvl"`
 }
 
 // CardProductType1Code ...
@@ -203,7 +183,6 @@ type CardProductType1Code string
 
 // CardTransaction4 ...
 type CardTransaction4 struct {
-	XMLName           *xml.Name               `xml:"CardTransaction4"`
 	TxTp              string                  `xml:"TxTp"`
 	Rcncltn           *TransactionIdentifier2 `xml:"Rcncltn"`
 	AccptrTxDtTm      string                  `xml:"AccptrTxDtTm"`
@@ -218,7 +197,6 @@ type CardTransaction4 struct {
 
 // CardTransactionAmount2 ...
 type CardTransactionAmount2 struct {
-	XMLName          *xml.Name          `xml:"CardTransactionAmount2"`
 	TtlAmt           *CurrencyAndAmount `xml:"TtlAmt"`
 	CrdhldrBllgTxAmt *DetailedAmount8   `xml:"CrdhldrBllgTxAmt"`
 	DtldAmt          []*DetailedAmount9 `xml:"DtldAmt"`
@@ -226,26 +204,22 @@ type CardTransactionAmount2 struct {
 
 // CardTransactionCondition1 ...
 type CardTransactionCondition1 struct {
-	XMLName *xml.Name `xml:"CardTransactionCondition1"`
-	Prgm    string    `xml:"Prgm"`
-	Val     string    `xml:"Val"`
+	Prgm string `xml:"Prgm"`
+	Val  string `xml:"Val"`
 }
 
 // CardTransactionContext3 ...
 type CardTransactionContext3 struct {
-	XMLName *xml.Name                `xml:"CardTransactionContext3"`
 	TxCntxt *CardTransactionContext4 `xml:"TxCntxt"`
 }
 
 // CardTransactionContext4 ...
 type CardTransactionContext4 struct {
-	XMLName   *xml.Name                    `xml:"CardTransactionContext4"`
 	SpclConds []*CardTransactionCondition1 `xml:"SpclConds"`
 }
 
 // CardTransactionDetail2 ...
 type CardTransactionDetail2 struct {
-	XMLName      *xml.Name                         `xml:"CardTransactionDetail2"`
 	TxAmts       *CardTransactionAmount2           `xml:"TxAmts"`
 	AddtlAmts    []*DetailedAmount10               `xml:"AddtlAmts"`
 	AcctAndBal   []*CardAccount2                   `xml:"AcctAndBal"`
@@ -256,7 +230,6 @@ type CardTransactionDetail2 struct {
 
 // CardTransactionEnvironment2 ...
 type CardTransactionEnvironment2 struct {
-	XMLName     *xml.Name          `xml:"CardTransactionEnvironment2"`
 	AcqrrId     string             `xml:"AcqrrId"`
 	CardSchmeId string             `xml:"CardSchmeId"`
 	AccptrId    string             `xml:"AccptrId"`
@@ -268,20 +241,17 @@ type CardTransactionEnvironment2 struct {
 
 // CertificateIssuer1 ...
 type CertificateIssuer1 struct {
-	XMLName        *xml.Name                     `xml:"CertificateIssuer1"`
 	RltvDstngshdNm []*RelativeDistinguishedName1 `xml:"RltvDstngshdNm"`
 }
 
 // ContentInformationType10 ...
 type ContentInformationType10 struct {
-	XMLName    *xml.Name       `xml:"ContentInformationType10"`
 	CnttTp     string          `xml:"CnttTp"`
 	EnvlpdData *EnvelopedData4 `xml:"EnvlpdData"`
 }
 
 // ContentInformationType15 ...
 type ContentInformationType15 struct {
-	XMLName      *xml.Name           `xml:"ContentInformationType15"`
 	CnttTp       string              `xml:"CnttTp"`
 	AuthntcdData *AuthenticatedData4 `xml:"AuthntcdData"`
 }
@@ -297,9 +267,8 @@ type CurrencyAndAmountSimpleType float64
 
 // CurrencyAndAmount ...
 type CurrencyAndAmount struct {
-	XMLName *xml.Name `xml:"CurrencyAndAmount"`
-	CcyAttr string    `json:"-,omitempty", bson:"-,omitempty", xml:"Ccy,attr"`
-	Value   float64   `xml:",chardata"`
+	CcyAttr string  `xml:"Ccy,attr"`
+	Value   float64 `xml:",chardata"`
 }
 
 // CurrencyCode ...
@@ -307,7 +276,6 @@ type CurrencyCode string
 
 // DetailedAmount10 ...
 type DetailedAmount10 struct {
-	XMLName *xml.Name          `xml:"DetailedAmount10"`
 	Tp      string             `xml:"Tp"`
 	AddtlTp string             `xml:"AddtlTp"`
 	Amt     *CurrencyAndAmount `xml:"Amt"`
@@ -316,32 +284,28 @@ type DetailedAmount10 struct {
 
 // DetailedAmount8 ...
 type DetailedAmount8 struct {
-	XMLName  *xml.Name `xml:"DetailedAmount8"`
-	Amt      float64   `xml:"Amt"`
-	XchgRate float64   `xml:"XchgRate"`
-	QtnDt    string    `xml:"QtnDt"`
-	Labl     string    `xml:"Labl"`
+	Amt      float64 `xml:"Amt"`
+	XchgRate float64 `xml:"XchgRate"`
+	QtnDt    string  `xml:"QtnDt"`
+	Labl     string  `xml:"Labl"`
 }
 
 // DetailedAmount9 ...
 type DetailedAmount9 struct {
-	XMLName *xml.Name `xml:"DetailedAmount9"`
-	Tp      string    `xml:"Tp"`
-	AddtlTp string    `xml:"AddtlTp"`
-	Amt     float64   `xml:"Amt"`
-	Labl    string    `xml:"Labl"`
+	Tp      string  `xml:"Tp"`
+	AddtlTp string  `xml:"AddtlTp"`
+	Amt     float64 `xml:"Amt"`
+	Labl    string  `xml:"Labl"`
 }
 
 // EncapsulatedContent3 ...
 type EncapsulatedContent3 struct {
-	XMLName *xml.Name `xml:"EncapsulatedContent3"`
-	CnttTp  string    `xml:"CnttTp"`
-	Cntt    string    `xml:"Cntt"`
+	CnttTp string `xml:"CnttTp"`
+	Cntt   string `xml:"Cntt"`
 }
 
 // EncryptedContent3 ...
 type EncryptedContent3 struct {
-	XMLName        *xml.Name                  `xml:"EncryptedContent3"`
 	CnttTp         string                     `xml:"CnttTp"`
 	CnttNcrptnAlgo *AlgorithmIdentification14 `xml:"CnttNcrptnAlgo"`
 	NcrptdData     string                     `xml:"NcrptdData"`
@@ -352,7 +316,6 @@ type EncryptionFormat1Code string
 
 // EnvelopedData4 ...
 type EnvelopedData4 struct {
-	XMLName    *xml.Name           `xml:"EnvelopedData4"`
 	Vrsn       float64             `xml:"Vrsn"`
 	Rcpt       []*Recipient4Choice `xml:"Rcpt"`
 	NcrptdCntt *EncryptedContent3  `xml:"NcrptdCntt"`
@@ -366,45 +329,40 @@ type Exact3NumericText string
 
 // GenericIdentification1 ...
 type GenericIdentification1 struct {
-	XMLName *xml.Name `xml:"GenericIdentification1"`
-	Id      string    `xml:"Id"`
-	SchmeNm string    `xml:"SchmeNm"`
-	Issr    string    `xml:"Issr"`
+	Id      string `xml:"Id"`
+	SchmeNm string `xml:"SchmeNm"`
+	Issr    string `xml:"Issr"`
 }
 
 // GenericIdentification73 ...
 type GenericIdentification73 struct {
-	XMLName *xml.Name `xml:"GenericIdentification73"`
-	Id      string    `xml:"Id"`
-	Tp      string    `xml:"Tp"`
-	Issr    string    `xml:"Issr"`
-	Ctry    string    `xml:"Ctry"`
-	ShrtNm  string    `xml:"ShrtNm"`
+	Id     string `xml:"Id"`
+	Tp     string `xml:"Tp"`
+	Issr   string `xml:"Issr"`
+	Ctry   string `xml:"Ctry"`
+	ShrtNm string `xml:"ShrtNm"`
 }
 
 // GenericIdentification74 ...
 type GenericIdentification74 struct {
-	XMLName *xml.Name `xml:"GenericIdentification74"`
-	Id      string    `xml:"Id"`
-	Tp      string    `xml:"Tp"`
-	Issr    string    `xml:"Issr"`
-	Ctry    string    `xml:"Ctry"`
-	ShrtNm  string    `xml:"ShrtNm"`
+	Id     string `xml:"Id"`
+	Tp     string `xml:"Tp"`
+	Issr   string `xml:"Issr"`
+	Ctry   string `xml:"Ctry"`
+	ShrtNm string `xml:"ShrtNm"`
 }
 
 // GenericIdentification75 ...
 type GenericIdentification75 struct {
-	XMLName *xml.Name `xml:"GenericIdentification75"`
-	Id      string    `xml:"Id"`
-	Tp      string    `xml:"Tp"`
-	Issr    string    `xml:"Issr"`
-	Ctry    string    `xml:"Ctry"`
-	ShrtNm  string    `xml:"ShrtNm"`
+	Id     string `xml:"Id"`
+	Tp     string `xml:"Tp"`
+	Issr   string `xml:"Issr"`
+	Ctry   string `xml:"Ctry"`
+	ShrtNm string `xml:"ShrtNm"`
 }
 
 // Header17 ...
 type Header17 struct {
-	XMLName        *xml.Name                `xml:"Header17"`
 	MsgFctn        string                   `xml:"MsgFctn"`
 	PrtcolVrsn     string                   `xml:"PrtcolVrsn"`
 	XchgId         string                   `xml:"XchgId"`
@@ -429,14 +387,12 @@ type ImpliedCurrencyAndAmount float64
 
 // IssuerAndSerialNumber1 ...
 type IssuerAndSerialNumber1 struct {
-	XMLName *xml.Name           `xml:"IssuerAndSerialNumber1"`
-	Issr    *CertificateIssuer1 `xml:"Issr"`
-	SrlNb   string              `xml:"SrlNb"`
+	Issr  *CertificateIssuer1 `xml:"Issr"`
+	SrlNb string              `xml:"SrlNb"`
 }
 
 // KEK4 ...
 type KEK4 struct {
-	XMLName       *xml.Name                  `xml:"KEK4"`
 	Vrsn          float64                    `xml:"Vrsn"`
 	KEKId         *KEKIdentifier2            `xml:"KEKId"`
 	KeyNcrptnAlgo *AlgorithmIdentification13 `xml:"KeyNcrptnAlgo"`
@@ -445,16 +401,14 @@ type KEK4 struct {
 
 // KEKIdentifier2 ...
 type KEKIdentifier2 struct {
-	XMLName   *xml.Name `xml:"KEKIdentifier2"`
-	KeyId     string    `xml:"KeyId"`
-	KeyVrsn   string    `xml:"KeyVrsn"`
-	SeqNb     float64   `xml:"SeqNb"`
-	DerivtnId string    `xml:"DerivtnId"`
+	KeyId     string  `xml:"KeyId"`
+	KeyVrsn   string  `xml:"KeyVrsn"`
+	SeqNb     float64 `xml:"SeqNb"`
+	DerivtnId string  `xml:"DerivtnId"`
 }
 
 // KeyTransport4 ...
 type KeyTransport4 struct {
-	XMLName       *xml.Name                  `xml:"KeyTransport4"`
 	Vrsn          float64                    `xml:"Vrsn"`
 	RcptId        *Recipient5Choice          `xml:"RcptId"`
 	KeyNcrptnAlgo *AlgorithmIdentification11 `xml:"KeyNcrptnAlgo"`
@@ -529,9 +483,8 @@ type Min8Max28NumericText string
 
 // NameAndAddress3 ...
 type NameAndAddress3 struct {
-	XMLName *xml.Name       `xml:"NameAndAddress3"`
-	Nm      string          `xml:"Nm"`
-	Adr     *PostalAddress1 `xml:"Adr"`
+	Nm  string          `xml:"Nm"`
+	Adr *PostalAddress1 `xml:"Adr"`
 }
 
 // Number ...
@@ -542,7 +495,6 @@ type OutputFormat1Code string
 
 // Parameter4 ...
 type Parameter4 struct {
-	XMLName      *xml.Name                  `xml:"Parameter4"`
 	NcrptnFrmt   string                     `xml:"NcrptnFrmt"`
 	DgstAlgo     string                     `xml:"DgstAlgo"`
 	MskGnrtrAlgo *AlgorithmIdentification12 `xml:"MskGnrtrAlgo"`
@@ -550,28 +502,24 @@ type Parameter4 struct {
 
 // Parameter5 ...
 type Parameter5 struct {
-	XMLName  *xml.Name `xml:"Parameter5"`
-	DgstAlgo string    `xml:"DgstAlgo"`
+	DgstAlgo string `xml:"DgstAlgo"`
 }
 
 // Parameter6 ...
 type Parameter6 struct {
-	XMLName      *xml.Name `xml:"Parameter6"`
-	NcrptnFrmt   string    `xml:"NcrptnFrmt"`
-	InitlstnVctr string    `xml:"InitlstnVctr"`
-	BPddg        string    `xml:"BPddg"`
+	NcrptnFrmt   string `xml:"NcrptnFrmt"`
+	InitlstnVctr string `xml:"InitlstnVctr"`
+	BPddg        string `xml:"BPddg"`
 }
 
 // Parameter7 ...
 type Parameter7 struct {
-	XMLName      *xml.Name `xml:"Parameter7"`
-	InitlstnVctr string    `xml:"InitlstnVctr"`
-	BPddg        string    `xml:"BPddg"`
+	InitlstnVctr string `xml:"InitlstnVctr"`
+	BPddg        string `xml:"BPddg"`
 }
 
 // PartyIdentification72Choice ...
 type PartyIdentification72Choice struct {
-	XMLName *xml.Name               `xml:"PartyIdentification72Choice"`
 	AnyBIC  string                  `xml:"AnyBIC"`
 	PrtryId *GenericIdentification1 `xml:"PrtryId"`
 }
@@ -587,7 +535,6 @@ type PartyType9Code string
 
 // PaymentCard13 ...
 type PaymentCard13 struct {
-	XMLName        *xml.Name                 `xml:"PaymentCard13"`
 	PrtctdCardData *ContentInformationType10 `xml:"PrtctdCardData"`
 	PlainCardData  *PlainCardData9           `xml:"PlainCardData"`
 	MskdPAN        string                    `xml:"MskdPAN"`
@@ -597,7 +544,6 @@ type PaymentCard13 struct {
 
 // PlainCardData9 ...
 type PlainCardData9 struct {
-	XMLName   *xml.Name     `xml:"PlainCardData9"`
 	PAN       string        `xml:"PAN"`
 	CardSeqNb string        `xml:"CardSeqNb"`
 	FctvDt    string        `xml:"FctvDt"`
@@ -611,32 +557,29 @@ type PlusOrMinusIndicator bool
 
 // PostalAddress1 ...
 type PostalAddress1 struct {
-	XMLName     *xml.Name `xml:"PostalAddress1"`
-	AdrTp       string    `xml:"AdrTp"`
-	AdrLine     []string  `xml:"AdrLine"`
-	StrtNm      string    `xml:"StrtNm"`
-	BldgNb      string    `xml:"BldgNb"`
-	PstCd       string    `xml:"PstCd"`
-	TwnNm       string    `xml:"TwnNm"`
-	CtrySubDvsn string    `xml:"CtrySubDvsn"`
-	Ctry        string    `xml:"Ctry"`
+	AdrTp       string   `xml:"AdrTp"`
+	AdrLine     []string `xml:"AdrLine"`
+	StrtNm      string   `xml:"StrtNm"`
+	BldgNb      string   `xml:"BldgNb"`
+	PstCd       string   `xml:"PstCd"`
+	TwnNm       string   `xml:"TwnNm"`
+	CtrySubDvsn string   `xml:"CtrySubDvsn"`
+	Ctry        string   `xml:"Ctry"`
 }
 
 // PostalAddress18 ...
 type PostalAddress18 struct {
-	XMLName     *xml.Name `xml:"PostalAddress18"`
-	AdrLine     []string  `xml:"AdrLine"`
-	StrtNm      string    `xml:"StrtNm"`
-	BldgNb      string    `xml:"BldgNb"`
-	PstCd       string    `xml:"PstCd"`
-	TwnNm       string    `xml:"TwnNm"`
-	CtrySubDvsn []string  `xml:"CtrySubDvsn"`
-	Ctry        string    `xml:"Ctry"`
+	AdrLine     []string `xml:"AdrLine"`
+	StrtNm      string   `xml:"StrtNm"`
+	BldgNb      string   `xml:"BldgNb"`
+	PstCd       string   `xml:"PstCd"`
+	TwnNm       string   `xml:"TwnNm"`
+	CtrySubDvsn []string `xml:"CtrySubDvsn"`
+	Ctry        string   `xml:"Ctry"`
 }
 
 // Recipient4Choice ...
 type Recipient4Choice struct {
-	XMLName    *xml.Name       `xml:"Recipient4Choice"`
 	KeyTrnsprt *KeyTransport4  `xml:"KeyTrnsprt"`
 	KEK        *KEK4           `xml:"KEK"`
 	KeyIdr     *KEKIdentifier2 `xml:"KeyIdr"`
@@ -644,16 +587,14 @@ type Recipient4Choice struct {
 
 // Recipient5Choice ...
 type Recipient5Choice struct {
-	XMLName      *xml.Name               `xml:"Recipient5Choice"`
 	IssrAndSrlNb *IssuerAndSerialNumber1 `xml:"IssrAndSrlNb"`
 	KeyIdr       *KEKIdentifier2         `xml:"KeyIdr"`
 }
 
 // RelativeDistinguishedName1 ...
 type RelativeDistinguishedName1 struct {
-	XMLName *xml.Name `xml:"RelativeDistinguishedName1"`
-	AttrTp  string    `xml:"AttrTp"`
-	AttrVal string    `xml:"AttrVal"`
+	AttrTp  string `xml:"AttrTp"`
+	AttrVal string `xml:"AttrVal"`
 }
 
 // Response3Code ...
@@ -661,10 +602,9 @@ type Response3Code string
 
 // ResponseType2 ...
 type ResponseType2 struct {
-	XMLName      *xml.Name `xml:"ResponseType2"`
-	Rslt         string    `xml:"Rslt"`
-	RsltDtls     string    `xml:"RsltDtls"`
-	AddtlRsltInf string    `xml:"AddtlRsltInf"`
+	Rslt         string `xml:"Rslt"`
+	RsltDtls     string `xml:"RsltDtls"`
+	AddtlRsltInf string `xml:"AddtlRsltInf"`
 }
 
 // ResultDetail1Code ...
@@ -672,7 +612,6 @@ type ResultDetail1Code string
 
 // Traceability3 ...
 type Traceability3 struct {
-	XMLName     *xml.Name                `xml:"Traceability3"`
 	RlayId      *GenericIdentification74 `xml:"RlayId"`
 	TracDtTmIn  string                   `xml:"TracDtTmIn"`
 	TracDtTmOut string                   `xml:"TracDtTmOut"`
@@ -680,25 +619,22 @@ type Traceability3 struct {
 
 // TrackData1 ...
 type TrackData1 struct {
-	XMLName *xml.Name `xml:"TrackData1"`
-	TrckNb  string    `xml:"TrckNb"`
-	TrckVal string    `xml:"TrckVal"`
+	TrckNb  string `xml:"TrckNb"`
+	TrckVal string `xml:"TrckVal"`
 }
 
 // TransactionIdentifier2 ...
 type TransactionIdentifier2 struct {
-	XMLName   *xml.Name `xml:"TransactionIdentifier2"`
-	RcncltnDt string    `xml:"RcncltnDt"`
-	RcncltnId string    `xml:"RcncltnId"`
+	RcncltnDt string `xml:"RcncltnDt"`
+	RcncltnId string `xml:"RcncltnId"`
 }
 
 // TransactionVerificationResult4 ...
 type TransactionVerificationResult4 struct {
-	XMLName    *xml.Name `xml:"TransactionVerificationResult4"`
-	Mtd        string    `xml:"Mtd"`
-	VrfctnNtty string    `xml:"VrfctnNtty"`
-	Rslt       string    `xml:"Rslt"`
-	AddtlRslt  string    `xml:"AddtlRslt"`
+	Mtd        string `xml:"Mtd"`
+	VrfctnNtty string `xml:"VrfctnNtty"`
+	Rslt       string `xml:"Rslt"`
+	AddtlRslt  string `xml:"AddtlRslt"`
 }
 
 // TypeOfAmount5Code ...
