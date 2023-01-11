@@ -3,14 +3,14 @@
 # usage: ./gen
 currentDir=$(PWD)
 
-rm -f $currentDir/pkg/*/model.go
+rm -f $currentDir/json/*/model.go
 
 for f in $currentDir/xsd/*.xsd ; do
     echo "$f"
     filename=$(basename $f)
     filenamenoextension="${filename%.*}"
     filenamenoextension2="${filenamenoextension//./_}"
-    cmd="xgen -l Go -i $f -o $currentDir/pkg/$filenamenoextension2/model.go -p $filenamenoextension2"
+    cmd="xgen -l Go -i $f -t Json -o $currentDir/json/$filenamenoextension2/model.go -p $filenamenoextension2"
     echo $cmd
     eval $cmd
 done
